@@ -1,5 +1,9 @@
 path = "lib/util/math/"
 
-math = require path .. "math"
+Matrix = require path .. "matrix"
+
+math   = require path .. "math"
+
+math.Matrix = Matrix
 
 math
