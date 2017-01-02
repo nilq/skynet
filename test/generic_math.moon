@@ -1,4 +1,4 @@
-import math from require "lib/util/math"
+import math from require "lib/util"
 
 with math
   print "f, i, n"
@@ -6,5 +6,12 @@ with math
   print .randi -100, 100
   print .randn -100, 100
 
+  print!
+
   print "gauss"
   print .gauss_random!
+
+  print!
+
+  print "zeros"
+  print (.zeros 5)[4], #.zeros 10

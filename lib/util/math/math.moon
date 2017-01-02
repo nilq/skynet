@@ -31,9 +31,13 @@ randi = (a, b) ->
 randn = (m, s) ->
   m + gauss_random! * s
 
+zeros = (n) ->
+  [0 for i = 1, n]
+
 {
   :gauss_random
   :randf
   :randi
   :randn
+  :zeros
 }
