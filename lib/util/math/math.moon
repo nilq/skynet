@@ -12,25 +12,28 @@ gauss_random = ->
 
     r = u^2 + v^2
 
-    return gauss_random! if r >= 0
+    return gauss_random! if r == 0 or r > 1
 
     c = .sqrt -2 * (.log r) / r
 
     value_v  = v * c
     return_v = true
 
-    u * c
+    return u * c
 
 randf = (a, b) ->
   math.random! * (b - a) + a
 
 randi = (a, b) ->
   with math
-    .floor .random! * (b - a) + a
+    return .floor .random! * (b - a) + a
 
 randn = (m, s) ->
   m + gauss_random! * s
 
 {
   :gauss_random
+  :randf
+  :randi
+  :randn
 }
